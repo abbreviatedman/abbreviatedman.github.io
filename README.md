@@ -1,1 +1,1 @@
-[abbreviatedman.github.io]: abbreviatedman.github.io
+[abbreviatedman.github.io]: (http://abbreviatedman.github.io)
