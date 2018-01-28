@@ -1,12 +1,125 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <link re  l="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello World</h1>
+
+  <style>
+    .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+  </style>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+  <div class="app">
+
+    <div class="album py-5 bg-light">
+      <div class="container text-center">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <p>Projects</p>
+            </div>
+          </div>
+          <div class="row">
+            <app-card
+              :title="diner.title"
+              :copy="diner.copy"
+              :img-src="diner.imgSrc"
+            ></app-card>
+            <app-card
+              :title="bisque.title"
+              :copy="bisque.copy"
+              :img-src="bisque.imgSrc"
+            ></app-card>
+            <app-card
+              :title="gameOfLeaf.title"
+              :copy="gameOfLeaf.copy"
+              :img-src="gameOfLeaf.imgSrc"
+            ></app-card>
+
+            <!--
+              <div class="card mb-4 box-shadow col-lg-3 col-md-6 col-sm-12">
+                <div class="card-img-top">
+                  <img src="./images/bisque.jpg">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Card text!
+                  </p>
+                </div>
+              </div>
+              <div class="card mb-4 box-shadow col-lg-3 col-md-6 col-sm-12">
+                <div class="card-img-top">
+                  <img src="./images/millhouse.jpg">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Card text!
+                  </p>
+                </div>
+              </div>
+              <div class="card mb-4 box-shadow col-lg-3 col-md-6 col-sm-12">
+                <div class="card-img-top">
+                  <img src="./images/game-of-leaf.jpg">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Card text!
+                  </p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <template id="app-card-template">
+      <div class="card mb-4 box-shadow col-lg-4 col-sm-12">
+          <div class="card-img-top">
+            <img :src="imgSrc">
+          </div>
+          <div class="card-body">
+            <h1>{{title}}</h1>
+            <p class="card-text">
+              {{copy}}
+            </p>
+          </div>
+        </div>
+    </template>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="./data.js"></script>
+
+    <script>
+
+      Vue.component('app-card', {
+          template: '#app-card-template',
+          props: {
+            'title': {
+              type: String,
+              required: true
+            },
+            'copy': {
+              type: String,
+              required: true
+            },
+            'imgSrc': {
+              type: String,
+              required: true
+            }
+          }
+      });
+
+      new Vue({
+        el: '.app',
+        data: data
+      });
+    </script>
   </body>
 </html>
