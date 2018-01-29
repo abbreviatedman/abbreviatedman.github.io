@@ -4,6 +4,7 @@
   <style>
     .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
     .no-link-styles, .no-link-styles:hover { color: black; text-decoration: none; }
+    .nav-button {margin: 10px;}
   </style>
 
 <head>
@@ -18,16 +19,16 @@
       <div class="container text-center">
         <div class="col-md-12">
           <div class="row">
-            <div class="col">
+            <div class="col-md">
               <h1>Colin Jaffe</h1>
             </div>
           </div>
           <hr>
           <div class="row">
-            <div class="col">
+            <div class="col-md">
               <button
               type="button"
-                class="btn btn-lg"
+                class="btn btn-lg nav-button"
                 :class="projectsButtonClasses"
                 @click="changeToProjectsView"
                 :disabled="section === 'projects'"
@@ -35,10 +36,10 @@
                 Projects
               </button>
             </div>
-            <div class="col">
+            <div class="col-md">
                 <button
                 type="button"
-                  class="btn btn-lg"
+                  class="btn btn-lg nav-button"
                   :class="technologiesButtonClasses"
                   @click="changeToTechnologiesView"
                   :disabled="section === 'technologies'"
@@ -49,7 +50,7 @@
             <div class="col">
               <button
                 type="button"
-                class="btn btn-lg"
+                class="btn btn-lg nav-button"
                 :class="hobbiesButtonClasses"
                 :disabled="section === 'hobbies'"
                 @click="changeToHobbiesView"
