@@ -7,8 +7,11 @@ new Vue({
     }
   },
   methods: {
-    changeView: function () {
-      this.section = this.section === 'hobbies' ? 'projects' : 'hobbies';
+    changeToProjectsView: function () {
+      this.section = 'projects';
+    },
+    changeToHobbiesView: function () {
+      this.section = 'hobbies';
     }
   }
 });

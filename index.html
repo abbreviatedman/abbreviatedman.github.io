@@ -39,9 +39,27 @@
             :img-src="project.imgSrc"
             ></app-card>
           </div>
-          </div>
           <div class="row">
-            <button type="button" class="btn btn-primary" @click="changeView">Change View</button>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-primary"
+                :class="{active: section === 'projects'}"
+                @click="changeToProjectsView"
+              >
+                Projects
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-primary"
+                :class="{active: section === 'hobbies'}"
+                @click="changeToHobbiesView"
+              >
+                Hobbies
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +68,7 @@
 </div>
 
 <template id="app-card-template">
-  <div class="card mb-4 box-shadow col-lg-4 col-sm-12">
+  <div class="card mb-4 box-shadow col-lg-4">
       <div class="card-img-top">
         <img :src="imgSrc">
       </div>
