@@ -28,7 +28,7 @@ var appData = {
     },
     {
       title: 'Podcasting',
-      copy: 'I\'ve got a face made for radio, so... podcasting, right? Turns out I\'ve got a voice made for typing. Still, I\'ve managed to get a couple shows out there!',
+      copy: 'I\'ve got a face made for radio, so... podcasting, right? Turns out I\'ve also got a voice made for typing. Still, I\'ve managed to get a couple shows out there!',
       imgUri: './images/podcasting.jpg'
     },
     {
@@ -36,6 +36,26 @@ var appData = {
       copy: 'I can make almost anything out of balloons. I still do an occasional birthday party!',
       imgUri: './images/balloons.jpg',
       linkUri: 'http://www.balloonasaurusrex.com'
+    }
+  ],
+  technologies: [
+    {
+      title: 'React',
+      copy: 'React\'s declarative, component-based view rendering makes front-end code modular and fun.',
+      imgUri: './images/react.jpg',
+      linkUri: 'https://reactjs.org/'
+    },
+    {
+      title: 'Node',
+      copy: 'Node is fast, performant, and allows us to use the same language for every part of our apps. But my favorite part is the innovation explosion it\'s enabled in the JavaScript community!',
+      imgUri: './images/node.jpg',
+      linkUri: 'https://nodejs.org/en/,'
+    },
+    {
+      title: 'Redux',
+      copy: 'Redux provides utility functions and an amazing setup for keeping your application\'s state simple and easy to figure out. The fact that Redux\'s own code is so simple and functional itself is a marvel.',
+      imgUri: './images/redux.jpg',
+      linkUri: 'https://redux.js.org/'
     }
   ]
 };

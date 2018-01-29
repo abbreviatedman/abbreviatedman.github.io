@@ -4,5 +4,8 @@ var appMethods = {
   },
   changeToHobbiesView: function () {
     this.section = 'hobbies';
+  },
+  changeToTechnologiesView: function () {
+    this.section = 'technologies';
   }
 };

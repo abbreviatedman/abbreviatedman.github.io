@@ -3,15 +3,18 @@ var appComputed = {
     return this.section[0].toUpperCase() + this.section.slice(1);
   },
   projectsButtonClasses: function () {
-    return {
-      'btn-outline-primary': this.section === 'hobbies',
-      'btn-primary': this.section === 'projects'
-    };
+    return this.section === 'projects'
+      ? 'btn-primary'
+      : 'btn-outline-primary';
   },
   hobbiesButtonClasses: function () {
-    return {
-      'btn-outline-primary': this.section === 'projects',
-      'btn-primary': this.section === 'hobbies'
-    };
+    return this.section === 'hobbies'
+      ? 'btn-primary'
+      : 'btn-outline-primary';
+  },
+  technologiesButtonClasses: function () {
+    return this.section === 'technologies'
+      ? 'btn-primary'
+      : 'btn-outline-primary';
   }
 };

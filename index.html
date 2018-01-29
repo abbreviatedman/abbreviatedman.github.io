@@ -36,6 +36,17 @@
               </button>
             </div>
             <div class="col">
+                <button
+                type="button"
+                  class="btn btn-lg"
+                  :class="technologiesButtonClasses"
+                  @click="changeToTechnologiesView"
+                  :disabled="section === 'technologies'"
+                >
+                  Technologies
+                </button>
+              </div>
+            <div class="col">
               <button
                 type="button"
                 class="btn btn-lg"
@@ -73,6 +84,16 @@
             :link-uri="project.linkUri"
             ></app-card>
           </div>
+          <div class="row" v-if="section === 'technologies'">
+              <app-card
+              v-for="(technology, index) in technologies"
+              :key="index"
+              :title="technology.title"
+              :copy="technology.copy"
+              :img-uri="technology.imgUri"
+              :link-uri="technology.linkUri"
+              ></app-card>
+            </div>
         </div>
       </div>
     </div>
@@ -80,13 +101,13 @@
 </div>
 
 <template id="app-card-template">
-  <div class="card mb-4 box-shadow col-lg-4">
+  <div class="card mb-4 box-shadow col-md-4">
     <a :href="linkUri" class="no-link-styles">
       <div class="card-img-top">
         <img :src="imgUri">
       </div>
       <div class="card-body">
-        <h1>{{title}}</h1>
+        <h5>{{title}}</h5>
         <p class="card-text">
           {{copy}}
         </p>
