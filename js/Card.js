@@ -1,17 +1,21 @@
 Vue.component('app-card', {
   template: '#app-card-template',
   props: {
-    'title': {
+    title: {
       type: String,
       required: true
     },
-    'copy': {
+    copy: {
       type: String,
       required: true
     },
-    'imgSrc': {
+    imgUri: {
       type: String,
       required: true
+    },
+    linkUri: {
+      type: String,
+      required: false
     }
   }
 });
