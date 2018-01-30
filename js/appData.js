@@ -47,15 +47,35 @@ var appData = {
     },
     {
       title: 'Node',
-      copy: 'Node is fast, performant, and allows us to use the same language for every part of our apps. But my favorite part is the innovation explosion it\'s enabled in the JavaScript community!',
+      copy: 'Fast, performant, and JavaScript-based. But my favorite part is the explosion it\'s caused in the JS community!',
       imgUri: './images/node.jpg',
       linkUri: 'https://nodejs.org/en/,'
     },
     {
       title: 'Redux',
-      copy: 'Redux provides utility functions and an amazing setup for keeping your application\'s state simple and easy to figure out. The fact that Redux\'s own code is so simple and functional itself is a marvel.',
+      copy: 'An amazing setup for keeping your application\'s state simple and easy to figure out. Even Redux\'s own code is full of functional goodness!',
       imgUri: './images/redux.jpg',
       linkUri: 'https://redux.js.org/'
+    }
+  ],
+  contactMethods: [
+    {
+      title: '',
+      copy: 'My public code. (Even this code!)',
+      imgUri: './images/github.png',
+      linkUri: 'http://www.github.com/abbreviatedman'
+    },
+    {
+      title: '',
+      copy: 'My online resume.',
+      imgUri: './images/linkedin.png',
+      linkUri: 'http://www.linkedin.com/in/colin-jaffe'
+    },
+    {
+      title: '',
+      copy: 'We all still use email, right? Gen Z?',
+      imgUri: './images/gmail.png',
+      linkUri: 'mailto:colin.jaffe@gmail.com'
     }
   ]
 };
