@@ -73,7 +73,7 @@ var appData = {
     },
     {
       title: '',
-      copy: 'We all still use email, right? Gen Z?',
+      copy: 'People are still on gmail, right? Gen Z?',
       imgUri: './images/gmail.png',
       linkUri: 'mailto:colin.jaffe@gmail.com'
     }
