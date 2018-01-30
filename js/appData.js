@@ -3,7 +3,7 @@ var appData = {
   projects: [
     {
       title: 'Bisque',
-      copy: 'A Chrome extension that serves up a delightful productivity melange. Track your productivity against your distractibility with tomato-flavored graphs.',
+      copy: 'A Chrome extension that allows you to track your productivity against your distractibility with tomato-flavored graphs.',
       imgUri: './images/bisque.jpg',
       linkUri: 'https://github.com/team-bisque/bisque'
     },
@@ -28,7 +28,7 @@ var appData = {
     },
     {
       title: 'Podcasting',
-      copy: 'I\'ve got a face made for radio, so... podcasting, right? Turns out I\'ve also got a voice made for typing. Still, I\'ve managed to get a couple shows out there!',
+      copy: 'I\'ve got a face made for radio. Turns out I\'ve also got a voice made for typing...',
       imgUri: './images/podcasting.jpg'
     },
     {
