@@ -61,12 +61,6 @@ var appData = {
   contactMethods: [
     {
       title: '',
-      copy: 'My public code. (Even this code!)',
-      imgUri: './images/github.png',
-      linkUri: 'http://www.github.com/abbreviatedman'
-    },
-    {
-      title: '',
       copy: 'My online resume.',
       imgUri: './images/linkedin.png',
       linkUri: 'http://www.linkedin.com/in/colin-jaffe'
@@ -76,6 +70,12 @@ var appData = {
       copy: 'People are still on gmail, right? Gen Z?',
       imgUri: './images/gmail.png',
       linkUri: 'mailto:colin.jaffe@gmail.com'
+    },
+    {
+      title: '',
+      copy: 'Code. Including this Vue/Bootstrap page!',
+      imgUri: './images/github.png',
+      linkUri: 'http://www.github.com/abbreviatedman'
     }
   ]
 };
