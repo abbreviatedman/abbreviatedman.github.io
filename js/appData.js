@@ -73,7 +73,7 @@ var appData = {
     },
     {
       title: '',
-      copy: 'Code. Including this Vue/Bootstrap page!',
+      copy: 'All my public code. Even this very page!',
       imgUri: './images/github.png',
       linkUri: 'http://www.github.com/abbreviatedman'
     }
