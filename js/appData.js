@@ -33,7 +33,7 @@ var appData = {
     },
     {
       title: 'Balloon Sculpture',
-      copy: 'I can make almost anything out of balloons. I still do an occasional birthday party!',
+      copy: 'I can make almost anything out of balloons. I\'ll teach you how to make Octocat sometime!',
       imgUri: './images/balloons.jpg',
       linkUri: 'http://www.balloonasaurusrex.com'
     }
