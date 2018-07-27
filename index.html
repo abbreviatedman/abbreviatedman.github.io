@@ -1,16 +1,140 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <script src ="./type.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-    <title>Document</title>
 
-</head>
-<body>
-    
-</body>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="https://unpkg.com/vue"></script>
+
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="album py-5 bg-light">
+        <div class="container text-center">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md">
+                <h1>Colin Jaffe</h1>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md">
+                <button
+                type="button"
+                  class="btn btn-lg nav-button"
+                  :class="projectsButtonClasses"
+                  @click="changeToProjectsView"
+                  :disabled="section === 'projects'"
+                >
+                  Projects
+                </button>
+              </div>
+              <div class="col-md">
+                  <button
+                  type="button"
+                    class="btn btn-lg nav-button"
+                    :class="technologiesButtonClasses"
+                    @click="changeToTechnologiesView"
+                    :disabled="section === 'technologies'"
+                  >
+                    Technologies
+                  </button>
+                </div>
+              <div class="col">
+                <button
+                  type="button"
+                  class="btn btn-lg nav-button"
+                  :class="hobbiesButtonClasses"
+                  :disabled="section === 'hobbies'"
+                  @click="changeToHobbiesView"
+                >
+                  Hobbies
+                </button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h3>{{sectionTitle}}</h3>
+              </div>
+            </div>
+            <div class="row" v-if="section === 'hobbies'">
+              <app-card
+                v-for="(hobby, index) in hobbies"
+                :key="index"
+                :title="hobby.title"
+                :copy="hobby.copy"
+                :img-uri="hobby.imgUri"
+                :link-uri="hobby.linkUri"
+              ></app-card>
+            </div>
+            <div class="row" v-if="section === 'projects'">
+              <app-card
+                v-for="(project, index) in projects"
+                :key="index"
+                :title="project.title"
+                :copy="project.copy"
+                :img-uri="project.imgUri"
+                :link-uri="project.linkUri"
+              ></app-card>
+            </div>
+            <div class="row" v-if="section === 'technologies'">
+              <app-card
+                v-for="(technology, index) in technologies"
+                :key="index"
+                :title="technology.title"
+                :copy="technology.copy"
+                :img-uri="technology.imgUri"
+                :link-uri="technology.linkUri"
+              ></app-card>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h5>Get More Colin In Your Life</h5>
+              </div>
+            </div>
+            <div class="row">
+              <app-card
+                v-for="(contactMethod, index) in contactMethods"
+                :key="index"
+                :title="contactMethod.title"
+                :copy="contactMethod.copy"
+                :img-uri="contactMethod.imgUri"
+                :link-uri="contactMethod.linkUri"
+              ></app-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <template id="app-card-template">
+      <div class="card mb-4 box-shadow col-md-4 app-card-template">
+        <a :href="linkUri" target="_blank" class="no-link-styles">
+          <div class="card-img-top">
+            <img :src="imgUri">
+          </div>
+          <div class="card-body">
+            <h5>{{title}}</h5>
+            <p class="card-text">
+              {{copy}}
+            </p>
+          </div>
+        </a>
+        </div>
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="./js/appData.js"></script>
+    <script src="./js/appComputed.js"></script>
+    <script src="./js/appMethods.js"></script>
+    <script src="./js/Card.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
