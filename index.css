@@ -14,3 +14,13 @@
 .app-card-template {
   padding: 10px;
 }
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+}
