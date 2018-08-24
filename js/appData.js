@@ -2,7 +2,7 @@ var appData = {
   section: 'projects',
   joke: '',
   jokeButtonClicked: false,
-  jokeInitialPrompt: `Can't believe you scrolled down this far. Would you like a dad joke?`,
+  jokeInitialPrompt: `Can't believe you're checking out the bottom down here. Would you like a dad joke as a reward?`,
   jokeSuccessivePrompt: `I hope (but doubt) you enjoyed that one. Again?`,
   jokeButtonText: `Sure, I hate myself enough. Hit me.`,
   projects: [
