@@ -1,5 +1,5 @@
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1  );
 }
 
 .no-link-styles, .no-link-styles:hover {
@@ -7,23 +7,68 @@
   text-decoration: none;
 }
 
-.nav-button {
+.button {
   margin: 10px;
+  border-width: 0;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  
+  transition: background-color .3s;
 }
 
-.app-card-template {
-  padding: 10px;
+.button:hover {
+  background-color:  #2eccbe;
+  transition: background-color .3s;
+}
+
+.current {
+  background-color:  #2eccbe;
+  transition: background-color .3s;
 }
 
 .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .row {
+    flex-direction: column;
+  }
 }
 
 .card {
+  flex: 1;
+  padding: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
+
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact .card{
+  padding: 0px;
+}
+
+.contact img {
+  margin-bottom: -30px;
+}
+
+.contact {
+  font-size: 0.8em;
+}
+
 
 .joke {
   font-weight: bold;

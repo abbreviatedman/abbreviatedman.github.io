@@ -13,42 +13,39 @@
   <body>
     <div class="app">
       <div class="row">
-        <h1>Colin Jaffe</h1>
+        <h1>Colin Jaffe's Personal Website</h1>
       </div>
       <hr>
       <div class="row">
         <button
           type="button"
-          class="btn btn-lg nav-button"
+          class="button"
           :class="projectsButtonClasses"
           @click="changeToProjectsView"
-          :disabled="section === 'projects'"
         >
           Projects
         </button>
         <button
-        type="button"
-          class="btn btn-lg nav-button"
+          type="button"
+          class="button"
           :class="technologiesButtonClasses"
           @click="changeToTechnologiesView"
-          :disabled="section === 'technologies'"
         >
           Technologies
         </button>
         <button
           type="button"
-          class="btn btn-lg nav-button"
+          class="button"
           :class="hobbiesButtonClasses"
-          :disabled="section === 'hobbies'"
           @click="changeToHobbiesView"
         >
           Hobbies
         </button>
       </div>
-      <hr>
-      <div class="row">
+      <!-- <hr> -->
+      <!-- <div class="row">
         <h3>{{sectionTitle}}</h3>
-      </div>
+      </div> -->
       <div class="row" v-if="section === 'hobbies'">
         <app-card
           v-for="(hobby, index) in hobbies"
@@ -79,25 +76,29 @@
           :copy="technology.copy"
           :img-uri="technology.imgUri"
           :link-uri="technology.linkUri"
+          class="app-card"
         >
         </app-card>
       </div>
-      <hr>
-      <div class="row">
+      <!-- <hr> -->
+      <div class="contact">
+        <div class="row">
           <h5>Get More Colin In Your Life</h5>
+        </div>
+        <div class="row">
+          <app-card
+            v-for="(contactMethod, index) in contactMethods"
+            :key="index"
+            :title="contactMethod.title"
+            :copy="contactMethod.copy"
+            :img-uri="contactMethod.imgUri"
+            :link-uri="contactMethod.linkUri"
+          >
+          </app-card>
       </div>
-      <div class="row">
-        <app-card
-          v-for="(contactMethod, index) in contactMethods"
-          :key="index"
-          :title="contactMethod.title"
-          :copy="contactMethod.copy"
-          :img-uri="contactMethod.imgUri"
-          :link-uri="contactMethod.linkUri"
-        >
-      </app-card>
-    </div>
-    <hr>
+
+      </div>
+    <!-- <hr> -->
     <div class="row">
       <p class="joke">
         {{joke}}
@@ -113,8 +114,9 @@
       </div>
       <div class="row">
           <button
+            class="button"
             type="button"
-            @click="changeJoke"
+            @click="getNewJoke"
           >
             {{jokeButtonText}}
           </button>
@@ -123,7 +125,7 @@
 
     <template id="app-card-template">
       <div class="card mb-4 box-shadow col-md-4 app-card-template">
-        <a :href="linkUri" target="_blank" class="no-link-styles">
+        <a :href="linkUri" target="_blank" class="no-link-styles card">
           <div class="card-img-top">
             <img :src="imgUri">
           </div>

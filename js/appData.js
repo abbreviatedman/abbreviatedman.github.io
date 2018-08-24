@@ -14,7 +14,7 @@ var appData = {
     },
     {
       title: 'Sean Bean\'s Last Scenes',
-      copy: 'A cross-platform mobile app featuring the final moments for each of the actor\'s famously mortal roles.',
+      copy: 'A cross-platform mobile app featuring the final moments for each of the actor\'s famously mortal characters.',
       imgUri: './images/seanbean.jpg',
       linkUri: 'https://github.com/abbreviatedman/sean-beans-last-scenes'
     },
@@ -72,7 +72,7 @@ var appData = {
     },
     {
       title: '',
-      copy: 'People are still on gmail, right? Gen Z?',
+      copy: 'People are still on gmail, right? Right? Gen Z? ...anyone?',
       imgUri: './images/gmail.png',
       linkUri: 'mailto:colin.jaffe@gmail.com'
     },
