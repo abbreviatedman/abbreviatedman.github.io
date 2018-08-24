@@ -14,7 +14,9 @@
       <header class="header">
         <h1>Colin Jaffe's Personal Site</h1>
       </header>
+
       <hr>
+
       <nav class="button-row">
         <button
           type="button"
@@ -41,6 +43,7 @@
           Hobbies
         </button>
       </nav>
+
       <section class="row" v-if="section === 'hobbies'">
           <app-card
             v-for="(hobby, index) in hobbies"
@@ -52,6 +55,7 @@
           >
           </app-card>
       </section>
+
       <section class="row" v-if="section === 'projects'">
           <app-card
             v-for="(project, index) in projects"
@@ -63,6 +67,7 @@
           >
           </app-card>
       </section>
+
       <section class="row" v-if="section === 'technologies'">
           <app-card
             v-for="(technology, index) in technologies"
@@ -75,7 +80,7 @@
           >
           </app-card>
       </section>
-      <!-- <hr> -->
+
       <section class="contact">
         <div class="row">
           <h5>Get More Colin In Your Life</h5>
