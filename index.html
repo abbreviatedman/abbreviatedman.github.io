@@ -83,41 +83,42 @@
         </div>
         <div class="row">
           <app-card
-            v-for="(contactMethod, index) in contactMethods"
+            v-for="(contactType, index) in contactTypes"
             :key="index"
-            :title="contactMethod.title"
-            :copy="contactMethod.copy"
-            :img-uri="contactMethod.imgUri"
-            :link-uri="contactMethod.linkUri"
+            :title="contactType.title"
+            :copy="contactType.copy"
+            :img-uri="contactType.imgUri"
+            :link-uri="contactType.linkUri"
           >
           </app-card>
         </div>
       </section>
-      <footer>
-        <div class="row">
-          <p class="joke">
-            {{joke}}
-          </p>
-        </div>
-        <div class="row">
-          <p v-if="jokeButtonClicked">
-            {{jokeSuccessivePrompt}}
-          </p>
-          <p v-else>
-            {{jokeInitialPrompt}}
-          </p>
-        </div>
-        <div class="row">
-            <button
-              class="button joke-button"
-              type="button"
-              @click="getNewJoke"
-            >
-              {{jokeButtonText}}
-            </button>
-        </div>
-      </footer>
     </div>
+
+    <footer class="jokes">
+      <div class="row">
+        <p class="joke">
+          {{joke}}
+        </p>
+      </div>
+      <div class="row">
+        <p v-if="jokeButtonClicked">
+          {{jokeSuccessivePrompt}}
+        </p>
+        <p v-else>
+          {{jokeInitialPrompt}}
+        </p>
+      </div>
+      <div class="row">
+          <button
+            class="button joke-button"
+            type="button"
+            @click="getNewJoke"
+          >
+            {{jokeButtonText}}
+          </button>
+      </div>
+    </footer>
 
     <template id="app-card-template">
       <div class="card mb-4 box-shadow col-md-4 app-card-template">
@@ -144,5 +145,8 @@
     <script src="./js/appMethods.js"></script>
     <script src="./js/Card.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/jokes/jokeMethods.js"></script>
+    <script src="./js/jokes/jokeData.js"></script>
+    <script src="./js/jokes/jokes.js"></script>
   </body>
 </html>

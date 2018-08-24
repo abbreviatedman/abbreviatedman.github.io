@@ -4,17 +4,17 @@ var appComputed = {
   },
   projectsButtonClasses: function () {
     return {
-      current: this.section === 'projects'
+      'current-section-button': this.section === 'projects'
     }
   },
   hobbiesButtonClasses: function () {
     return {
-      current: this.section === 'hobbies'
+      'current-section-button': this.section === 'hobbies'
     }
   },
   technologiesButtonClasses: function () {
     return {
-      current: this.section === 'technologies'
+      'current-section-button': this.section === 'technologies'
     }
   },
 };

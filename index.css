@@ -33,7 +33,7 @@
   transition: background-color .3s;
 }
 
-.current {
+.current-section-button {
   background-color:  #2eccbe;
   transition: background-color .3s;
 }
