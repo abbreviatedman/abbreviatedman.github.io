@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-
+    <title>Colin Jaffe's Personal Site</title>
   </head>
 
   <body>
     <div class="app">
-      <div class="row">
-        <h1>Colin Jaffe's Personal Website</h1>
-      </div>
+      <header class="header">
+        <h1>Colin Jaffe's Personal Site</h1>
+      </header>
       <hr>
-      <div class="row">
+      <nav class="button-row">
         <button
           type="button"
           class="button"
@@ -41,47 +41,43 @@
         >
           Hobbies
         </button>
-      </div>
+      </nav>
+      <section class="row" v-if="section === 'hobbies'">
+          <app-card
+            v-for="(hobby, index) in hobbies"
+            :key="index"
+            :title="hobby.title"
+            :copy="hobby.copy"
+            :img-uri="hobby.imgUri"
+            :link-uri="hobby.linkUri"
+          >
+          </app-card>
+      </section>
+      <section class="row" v-if="section === 'projects'">
+          <app-card
+            v-for="(project, index) in projects"
+            :key="index"
+            :title="project.title"
+            :copy="project.copy"
+            :img-uri="project.imgUri"
+            :link-uri="project.linkUri"
+          >
+          </app-card>
+      </section>
+      <section class="row" v-if="section === 'technologies'">
+          <app-card
+            v-for="(technology, index) in technologies"
+            :key="index"
+            :title="technology.title"
+            :copy="technology.copy"
+            :img-uri="technology.imgUri"
+            :link-uri="technology.linkUri"
+            class="app-card"
+          >
+          </app-card>
+      </section>
       <!-- <hr> -->
-      <!-- <div class="row">
-        <h3>{{sectionTitle}}</h3>
-      </div> -->
-      <div class="row" v-if="section === 'hobbies'">
-        <app-card
-          v-for="(hobby, index) in hobbies"
-          :key="index"
-          :title="hobby.title"
-          :copy="hobby.copy"
-          :img-uri="hobby.imgUri"
-          :link-uri="hobby.linkUri"
-        >
-        </app-card>
-      </div>
-      <div class="row" v-if="section === 'projects'">
-        <app-card
-          v-for="(project, index) in projects"
-          :key="index"
-          :title="project.title"
-          :copy="project.copy"
-          :img-uri="project.imgUri"
-          :link-uri="project.linkUri"
-        >
-        </app-card>
-      </div>
-      <div class="row" v-if="section === 'technologies'">
-        <app-card
-          v-for="(technology, index) in technologies"
-          :key="index"
-          :title="technology.title"
-          :copy="technology.copy"
-          :img-uri="technology.imgUri"
-          :link-uri="technology.linkUri"
-          class="app-card"
-        >
-        </app-card>
-      </div>
-      <!-- <hr> -->
-      <div class="contact">
+      <section class="contact">
         <div class="row">
           <h5>Get More Colin In Your Life</h5>
         </div>
@@ -95,32 +91,32 @@
             :link-uri="contactMethod.linkUri"
           >
           </app-card>
-      </div>
-
-      </div>
-    <!-- <hr> -->
-    <div class="row">
-      <p class="joke">
-        {{joke}}
-      </p>
-    </div>
-    <div class="row">
-        <p v-if="jokeButtonClicked">
-          {{jokeSuccessivePrompt}}
-        </p>
-        <p v-else>
-          {{jokeInitialPrompt}}
-        </p>
-      </div>
-      <div class="row">
-          <button
-            class="button"
-            type="button"
-            @click="getNewJoke"
-          >
-            {{jokeButtonText}}
-          </button>
-      </div>
+        </div>
+      </section>
+      <footer>
+        <div class="row">
+          <p class="joke">
+            {{joke}}
+          </p>
+        </div>
+        <div class="row">
+          <p v-if="jokeButtonClicked">
+            {{jokeSuccessivePrompt}}
+          </p>
+          <p v-else>
+            {{jokeInitialPrompt}}
+          </p>
+        </div>
+        <div class="row">
+            <button
+              class="button joke-button"
+              type="button"
+              @click="getNewJoke"
+            >
+              {{jokeButtonText}}
+            </button>
+        </div>
+      </footer>
     </div>
 
     <template id="app-card-template">

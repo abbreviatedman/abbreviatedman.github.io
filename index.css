@@ -9,6 +9,7 @@
 
 .button {
   margin: 10px;
+  padding: 5px;
   border-width: 0;
   outline: none;
   border-radius: 3px;
@@ -16,8 +17,15 @@
 
   background-color: #2ecc71;
   color: #ecf0f1;
+  font-size: 1.2em;
+  font-weight: bold;
   
   transition: background-color .3s;
+}
+
+.joke-button {
+  font-size: 1em;
+  font-weight: normal;
 }
 
 .button:hover {
@@ -30,16 +38,22 @@
   transition: background-color .3s;
 }
 
-.row {
+.header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
-@media (max-width: 1000px) {
-  .row {
-    flex-direction: column;
-  }
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -50,19 +64,20 @@
   align-items: center;
 }
 
+@media (max-width: 1000px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
 
 .card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.contact .card{
-  padding: 0px;
-}
-
-.contact img {
-  margin-bottom: -30px;
 }
 
 .contact {

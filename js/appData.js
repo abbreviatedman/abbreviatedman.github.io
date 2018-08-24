@@ -4,7 +4,7 @@ var appData = {
   jokeButtonClicked: false,
   jokeInitialPrompt: `Can't believe you're checking out the bottom down here. Would you like a dad joke as a reward?`,
   jokeSuccessivePrompt: `I hope (but doubt) you enjoyed that one. Again?`,
-  jokeButtonText: `Sure, I hate myself enough. Hit me.`,
+  jokeButtonText: `Sure, I've had too good a day so far. Hit me.`,
   projects: [
     {
       title: 'Bisque',
@@ -72,7 +72,7 @@ var appData = {
     },
     {
       title: '',
-      copy: 'People are still on gmail, right? Right? Gen Z? ...anyone?',
+      copy: `Whatever the future holds, it for some reason holds email.`,
       imgUri: './images/gmail.png',
       linkUri: 'mailto:colin.jaffe@gmail.com'
     },
