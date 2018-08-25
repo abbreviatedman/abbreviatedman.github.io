@@ -106,11 +106,11 @@
         </p>
       </div>
       <div class="row">
-        <p v-if="jokeButtonClicked">
-          {{jokeSuccessivePrompt}}
+        <p v-if="!jokeButtonClicked">
+          {{jokeInitialPrompt}}
         </p>
         <p v-else>
-          {{jokeInitialPrompt}}
+          {{jokeSuccessivePrompt}}
         </p>
       </div>
       <div class="row">
@@ -125,14 +125,14 @@
     </footer>
 
     <template id="app-card-template">
-      <div class="card mb-4 box-shadow col-md-4 app-card-template">
+      <div class="card box-shadow">
         <a :href="linkUri" target="_blank" class="no-link-styles card">
-          <div class="card-img-top">
-            <img :src="imgUri">
-          </div>
+          <h5>
+            {{title}}
+          </h5>
+          <img :src="imgUri">
           <div class="card-body">
-            <h5>{{title}}</h5>
-            <p class="card-text">
+            <p>
               {{copy}}
             </p>
           </div>

@@ -1,5 +1,5 @@
 const jokeMethods = {
-    getNewJoke: async function () {
+    getNewJoke: async function() {
         const request = {
             baseURL: 'https://icanhazdadjoke.com/',
             headers: {
@@ -11,7 +11,7 @@ const jokeMethods = {
             const response = await axios(request);
             this.joke = response.data.joke;
             this.jokeButtonClicked = true;
-        } catch (error) {
+        } catch(error) {
             console.error(error);
         }
     }

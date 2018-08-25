@@ -60,19 +60,19 @@ var appData = {
   ],
   contactTypes: [
     {
-      title: '',
-      copy: 'My online resume.',
+      title: 'My LinkedIn Profile',
+      copy: 'LinkedIn - it\s like a resume, but... never mind, it IS just a resume.',
       imgUri: './images/linkedin.png',
       linkUri: 'http://www.linkedin.com/in/colin-jaffe'
     },
     {
-      title: '',
-      copy: `Whatever the future holds, it for some reason holds email.`,
+      title: 'My Email Address',
+      copy: `In every universe in the multiverse, somehow we always get stuck with email.`,
       imgUri: './images/gmail.png',
       linkUri: 'mailto:colin.jaffe@gmail.com'
     },
     {
-      title: '',
+      title: 'My GitHub Portfolio',
       copy: 'All my public code. Even this very page!',
       imgUri: './images/github.png',
       linkUri: 'http://www.github.com/abbreviatedman'
