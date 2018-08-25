@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="app">
+    <div class="main-app">
       <header class="header">
         <h1>Colin Jaffe's Personal Site</h1>
       </header>
@@ -99,7 +99,7 @@
       </section>
     </div>
 
-    <footer class="jokes">
+    <footer class="jokes-app">
       <div class="row">
         <p class="joke">
           {{joke}}
@@ -126,7 +126,11 @@
 
     <template id="app-card-template">
       <div class="card box-shadow">
-        <a :href="linkUri" target="_blank" class="no-link-styles card">
+        <a
+        :href="linkUri"
+        target="_blank"
+        class="card no-link-styles"
+        >
           <h5>
             {{title}}
           </h5>
@@ -140,13 +144,13 @@
       </div>
     </template>
 
-    <script src="./js/appData.js"></script>
-    <script src="./js/appComputed.js"></script>
-    <script src="./js/appMethods.js"></script>
-    <script src="./js/Card.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/jokes/jokeMethods.js"></script>
-    <script src="./js/jokes/jokeData.js"></script>
-    <script src="./js/jokes/jokes.js"></script>
+    <script src="./js/components/Card.js"></script>
+    <script src="./js/mainApp/mainAppData.js"></script>
+    <script src="./js/mainApp/mainAppComputed.js"></script>
+    <script src="./js/mainApp/mainAppMethods.js"></script>
+    <script src="./js/mainApp/mainApp.js"></script>
+    <script src="./js/jokesApp/jokesAppData.js"></script>
+    <script src="./js/jokesApp/jokesAppMethods.js"></script>
+    <script src="./js/jokesApp/jokesApp.js"></script>
   </body>
 </html>

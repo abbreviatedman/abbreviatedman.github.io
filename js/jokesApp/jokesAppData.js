@@ -1,4 +1,4 @@
-const jokeData = {
+const jokesAppData = {
     joke: '*****',
     jokeButtonClicked: false,
     jokeInitialPrompt: `Can't believe you're checking out the bottom down here. Would you like a dad joke as a reward?`,

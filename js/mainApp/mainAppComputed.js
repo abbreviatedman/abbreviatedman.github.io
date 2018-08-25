@@ -1,4 +1,4 @@
-var appComputed = {
+var mainAppComputed = {
   sectionTitle: function() {
     return this.section[0].toUpperCase() + this.section.slice(1);
   },

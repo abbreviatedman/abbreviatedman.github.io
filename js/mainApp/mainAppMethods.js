@@ -1,4 +1,4 @@
-var appMethods = {
+var mainAppMethods = {
   changeToProjectsView: function () {
     this.section = 'projects';
   },

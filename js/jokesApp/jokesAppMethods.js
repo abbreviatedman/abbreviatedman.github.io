@@ -1,4 +1,4 @@
-const jokeMethods = {
+const jokesAppMethods = {
     getNewJoke: async function() {
         const request = {
             baseURL: 'https://icanhazdadjoke.com/',

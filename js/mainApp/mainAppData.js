@@ -1,4 +1,4 @@
-var appData = {
+var mainAppData = {
   section: 'projects',
   projects: [
     {
