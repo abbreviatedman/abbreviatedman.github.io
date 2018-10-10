@@ -1,1 +1,1 @@
-[abbreviatedman.github.io](http://abbreviatedman.github.io)
+Deployed at [abbreviatedman.github.io](http://abbreviatedman.github.io)
